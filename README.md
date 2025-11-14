@@ -65,6 +65,18 @@ AWS_ACCESS_KEY_ID=YOUR_KEY
 AWS_SECRET_ACCESS_KEY=YOUR_SECRET
 JWT_SECRET=YOUR_SECRET
 
+******************************************************************************************************************
+Scripts
+
+ "scripts": {
+    "dev": "vite",
+    "build-frontend": "tsc -b && vite build",
+    "build-server": "tsc -p ./srcServer/tsconfig.json",
+    "start-server": "node --env-file ./.env  ./distServer/server.js",
+    "restart-server": "clear && npm run build-server && npm run start-server",
+    "predeploy": "npm run build-frontend && npm run build-server"
+  }
+  
 '*****************************************************************************************************************
 Installation & Setup
 
