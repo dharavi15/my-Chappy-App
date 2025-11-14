@@ -1,0 +1,208 @@
+
+ html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f4f8;
+}
+
+   /*LOGIN / REGISTER PAGE*/
+
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f4f8;
+}
+
+.auth-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.auth-container p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.auth-container input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.auth-container button {
+  background-color: #ff6b00;
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-container button:hover {
+  background-color: #ff8533;
+}
+
+.switch {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.switch span {
+  color: #ff6b00;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+   /*CHAT LAYOUT (SIDEBAR + MAIN)*/
+
+
+.chat-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #fff;
+}
+
+
+.sidebar {
+  width: 260px;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.section-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b00;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+.dm-list,
+.channel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.channel,
+.dm-item {
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: background 0.2s;
+}
+
+.channel:hover,
+.dm-item:hover {
+  background-color: #ffe9d5;
+}
+
+.channel.active,
+.dm-item.active {
+  background-color: #ff6b00;
+  color: white;
+}
+
+ 
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0;         
+  border: none;       
+  background: #fff;
+}
+
+/* One message container */
+.message {
+  padding: 0.6rem 0.8rem;
+  transition: background 0.2s;
+}
+
+/* Hover effect */
+.message:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Sender + message text + timestamp (same line) */
+.message-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message strong {
+  color: #333;
+}
+
+/* Divider under each message */
+.message hr {
+  margin: 0.3rem 0 0 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+
+   /*SEND MESSAGE INPUT*/
+.chat-input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.chat-send-btn {
+  margin-left: 0.5rem;
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-send-btn:hover {
+  background-color: #ff8533;
+}
+
+
+  /* ERROR MESSAGE*/
+.error-message {
+  color: #e74c3c;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
