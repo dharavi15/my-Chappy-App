@@ -1,6 +1,4 @@
 import { useState } from "react";
-// We no longer need API_BASE for login — backend is same origin
-// import { API_BASE } from "../config";
 
 interface LoginPageProps {
   onSwitchToRegister: () => void;
@@ -22,14 +20,14 @@ export default function LoginPage({
     setError("");
 
     try {
-      //  Always call your backend via /api/auth/login
+      //  calls backend via /api/auth/login
       const res = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
 
-      // Safely read JSON only if backend sent JSON
+      // reads JSON only if backend sent JSON
       let data: any = {};
       const contentType = res.headers.get("content-type");
       if (contentType && contentType.includes("application/json")) {
