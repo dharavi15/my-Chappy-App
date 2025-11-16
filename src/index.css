@@ -7,9 +7,6 @@
   background-color: #f5f4f8;
 }
 
-   /*LOGIN / REGISTER PAGE*/
-
-
 .auth-page {
   display: flex;
   justify-content: center;
@@ -78,10 +75,6 @@
   font-weight: 600;
 }
 
-
-   /*CHAT LAYOUT (SIDEBAR + MAIN)*/
-
-
 .chat-layout {
   display: flex;
   height: 100vh;
@@ -135,7 +128,6 @@
   color: white;
 }
 
- 
 .chat-messages {
   flex-grow: 1;
   overflow-y: auto;
@@ -144,19 +136,18 @@
   background: #fff;
 }
 
-/* One message container */
 .message {
   padding: 0.6rem 0.8rem;
   transition: background 0.2s;
 }
 
-/* Hover effect */
+
 .message:hover {
   background-color: #f1f1f1;
   cursor: pointer;
 }
 
-/* Sender + message text + timestamp (same line) */
+
 .message-line {
   display: flex;
   justify-content: space-between;
@@ -167,15 +158,12 @@
   color: #333;
 }
 
-/* Divider under each message */
 .message hr {
   margin: 0.3rem 0 0 0;
   border: none;
   border-top: 1px solid #eee;
 }
 
-
-   /*SEND MESSAGE INPUT*/
 .chat-input {
   flex-grow: 1;
   padding: 0.5rem;
@@ -198,8 +186,6 @@
   background-color: #ff8533;
 }
 
-
-  /* ERROR MESSAGE*/
 .error-message {
   color: #e74c3c;
   margin-top: 0.8rem;
