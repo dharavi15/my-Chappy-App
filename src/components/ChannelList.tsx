@@ -23,7 +23,7 @@ export default function ChannelList({
 
   async function fetchChannels() {
     try {
-      // 🚀 Same-origin request (Render + Local OK)
+
       const res = await fetch("/api/channels", {
         headers: token ? { Authorization: `Bearer ${token}` } : {},
       });
@@ -35,9 +35,8 @@ export default function ChannelList({
         data = await res.json();
       }
 
-            // Ensure array
       if (Array.isArray(data)) {
-        // Extract channel names safely
+    
         const cleaned = data.map((ch: any) => ({
           ...ch,
           name: ch.name || ch.Sk?.replace("channel#", ""),
@@ -100,7 +99,7 @@ export default function ChannelList({
             >
               <span>{channelName}</span>
 
-              {/* 🔒 Locked channel icon */}
+           
               {ch.locked && (
                 <span style={{ fontSize: "0.9rem", opacity: 0.8 }}>🔒</span>
               )}
