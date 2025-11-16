@@ -50,7 +50,6 @@ router.get("/", optionalAuth, async (req: AuthenticatedRequest, res) => {
 
 
 // GET /api/channels/all
-// (Not required by frontend anymore, but kept)
 // Users only
 router.get("/all", authenticateToken, async (_req: AuthenticatedRequest, res) => {
   try {
