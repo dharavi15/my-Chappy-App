@@ -26,7 +26,6 @@ router.get("/:username", authenticateToken, async (req: AuthenticatedRequest, re
     const userA = req.user.username.toLowerCase();
     const userB = req.params.username.toLowerCase();
 
-    // Shared sorted partition key
     const users = [userA, userB].sort();
     const dmKey = `dm#${users[0]}#${users[1]}`;
 
@@ -64,7 +63,6 @@ router.post("/", authenticateToken, async (req: AuthenticatedRequest, res) => {
     const timestamp = new Date().toISOString();
     const id = crypto.randomUUID();
 
-    // Shared DM thread key
     const users = [fromUser, toUser].sort();
     const dmKey = `dm#${users[0]}#${users[1]}`;
 
