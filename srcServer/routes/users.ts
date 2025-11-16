@@ -5,21 +5,16 @@ import { generateToken } from "../auth/jwt.js";
 import { hashPassword } from "../auth/hash.js";
 import { authenticateToken, optionalAuth } from "../auth/authMiddleware.js";
 import type { AuthenticatedRequest } from "../auth/authMiddleware.js";
-
 import { z } from "zod";
 import crypto from "crypto";
 
-
-
 const router = Router();
-
 
 // Zod validation schema
 const userSchema = z.object({
   username: z.string().min(2, "Username must be at least 2 characters"),
   password: z.string().min(4, "Password must be at least 4 characters"),
 });
-
 
 // GET /api/users
 // Return list of usernames (for DMList)
@@ -46,7 +41,6 @@ router.get("/", async (_req, res) => {
 
 
 // POST /api/users/status
-// Update online/offline status
 router.post("/status", authenticateToken, async (req: AuthenticatedRequest, res) => {
   try {
     const { online } = req.body as { online: boolean };
