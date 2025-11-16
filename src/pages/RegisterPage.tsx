@@ -35,7 +35,7 @@ export default function RegisterPage({ onSwitchToLogin }: RegisterPageProps) {
         return;
       }
 
-      // Success 🎉
+      
       setIsError(false);
       setMessage("🎉 Registered successfully! Redirecting to login...");
 
